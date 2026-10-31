@@ -1,8 +1,6 @@
-# BBJake - https://bbjake.com
+# BBJake - https://www.bbjake.com
 User-agent: *
 Allow: /
-Disallow: /terms
-Disallow: /privacy
 
 # AI and search crawlers are welcome
 User-agent: GPTBot
@@ -32,4 +30,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://bbjake.com/sitemap.xml
+Sitemap: https://www.bbjake.com/sitemap.xml

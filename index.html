@@ -248,8 +248,7 @@ footer a{text-decoration:none}
 .stat b{font-size:clamp(24px,3vw,34px)}
 .stat.hot{display:flex;flex-direction:column;justify-content:center}
 .stat.hot b{font-size:clamp(56px,9vw,96px);letter-spacing:-.04em}
-.statlink{margin:12px 0 0;font-weight:700}
-.statlink a{text-underline-offset:3px;text-decoration-thickness:2px}
+.stat.hot a{margin-top:12px;font:800 13px var(--f-display);font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:#0C1830;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;align-self:flex-start}
 .partnercta{margin-top:18px}
 .playbtn{background:none;border:0;cursor:pointer;padding:0}
 .embedbox .thumb{position:absolute;inset:0;aspect-ratio:auto;border-radius:0}
@@ -315,12 +314,11 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
         </div>
       </div>
       <div class="stats">
-        <div class="stat hot"><b>40M+</b><span>Reel Views<br>Last 90 Days</span></div>
+        <div class="stat hot"><b>40M+</b><span>Reel Views<br>Last 90 Days</span><a href="/media-kit">View Full Stats &rarr;</a></div>
         <div class="stat"><b>50.5K+</b><span>Instagram Followers</span></div>
         <div class="stat"><b>4.8K+</b><span>Twitch Followers</span></div>
         <div class="stat"><b>1.1K+</b><span>YouTube Subscribers</span></div>
       </div>
-      <p class="statlink"><a href="/media-kit">Full stats in the media kit &rarr;</a></p>
       <a class="partnercta" href="#partner"><span>Work with Jake</span><i aria-hidden="true">&rarr;</i></a>
     </div>
   </div>
@@ -341,7 +339,7 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
   <section id="videos">
     <div class="wrap">
       <div class="sec-head">
-        <div><h2>Videos</h2><p>BBJake's latest YouTube videos</p></div>
+        <div><h2>Videos</h2></div>
         <div class="chips" role="group" aria-label="Sort videos">
           <button class="chip" data-sort="latest" aria-pressed="true">Latest</button>
           <button class="chip" data-sort="popular" aria-pressed="false">Most Viewed</button>
@@ -359,11 +357,11 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
       <div class="about">
         <div>
           <h2 style="margin-bottom:20px">About Jake</h2>
-          <p>Jacob Coburn, aka BBJake, streams from Visalia almost every day. He started BeenBlessed after the hardest stretch of his life, and he's been throwing events for the city ever since.</p>
-          <p>He's run boxing events where the best fight won $200, a water balloon war at Mill Creek Park with 10,000+ balloons, and a BBQ that fed 200+ people with free haircuts. One boxing event got broken up by the police. <a href="/community">See every giveback event</a>.</p>
-          <p>He's collabed with Adin Ross, Richard Torrez Jr., Deen The Great and Yvng Ecko, and got featured by SportsCenter. <a href="/press">Read the press coverage</a>.</p>
-          <p>His biggest story so far: a 48-hour trip to LA with a homeless man named Popeye. <a href="https://www.youtube.com/watch?v=u4C0PN0wJUk" target="_blank" rel="noopener">Watch it here on YouTube</a>.</p>
-          <p>BeenBlessed is Jake's Christian clothing brand, and he's the CEO. If you want the 559 to know your business, this is the guy who gets them to show up.</p>
+          <p>Jacob Coburn, better known as BBJake is the 559's #1 content creator and the face of Visalia streaming. Streamer, YouTuber and event host, he built his following by showing up for the community, online and in person, every time.</p>
+          <p>He's live almost every day, and has already collabed with some of the biggest names, including Adin Ross, Richard Torrez, Deen The Great, Yvng Ecko, and was even <a href="/press">featured on SportsCenter</a>. The 559 is where his heart is, and the city shows up for him because he shows up for the city!</p>
+          <p>Jake is <a href="/community">giving back</a> with food drives, giveaways and events that bring locals together. Boxing events, car meets, football tournaments and the biggest water balloon event in the 559 help strengthen the Visalia community.</p>
+          <p>In one of his latest videos, he took a homeless man on the trip of a lifetime for 48 hours! <a href="https://www.youtube.com/watch?v=u4C0PN0wJUk" target="_blank" rel="noopener">Watch it here on YouTube</a>.</p>
+          <p>Jake is also the CEO of BeenBlessed, a Christian clothing brand out of Visalia. With the largest audience in the area and a loyal local fanbase that actually shows up, Jake puts your brand in front of the people in the 559 who care. Let's talk.</p>
           <p><a href="/about">More about Jacob Coburn (BBJake)</a></p>
         </div>
         <div class="abphoto"><img src="/img/bbjake-portrait.jpg" width="600" height="600" loading="lazy" alt="BBJake smiling and throwing up peace signs"></div>
@@ -376,7 +374,6 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
       <div class="sec-head">
         <div>
           <h2>BeenBlessed Brand</h2>
-          <p>Tees, hoodies and swim trunks from Jake's clothing brand</p>
         </div>
         <div class="chips" role="group" aria-label="Filter merch">
           <button class="chip" data-cat="all" aria-pressed="true">All</button>
@@ -429,7 +426,7 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
 
       <div class="collabwrap" id="collabs">
           <div class="sec-head">
-        <div><h2>Collabs</h2><p>People BBJake has worked with</p></div>
+        <h2>Collabs</h2>
       </div>
       <div class="collabs">
         <figure class="collab c0"><img src="/img/collab-adin-ross.jpg" alt="Adin Ross" width="440" height="550" loading="lazy"><figcaption>Adin Ross</figcaption></figure>
@@ -450,7 +447,7 @@ footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:
 
   <section id="links">
     <div class="wrap">
-      <div class="sec-head"><div><h2>Links</h2><p>Follow BBJake everywhere</p></div></div>
+      <div class="sec-head"><div><h2>Links</h2></div></div>
       <div class="links">
         <a class="link" href="https://www.instagram.com/bbjake" target="_blank" rel="noopener"><div><b>Instagram</b><span>@bbjake</span></div><i class="arr">&rarr;</i></a>
         <a class="link" href="https://www.youtube.com/@bbjakee" target="_blank" rel="noopener"><div><b>YouTube</b><span>@bbjakee</span></div><i class="arr">&rarr;</i></a>

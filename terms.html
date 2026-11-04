@@ -8,7 +8,7 @@
 <title>Terms of Use | BBJake</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Sans:opsz,wght@9..40,400..700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --bg:#F3F8FC; --surface:#FFFFFF; --ink:#0C1830; --muted:#4F5E78; --line:#D3E1EE;
@@ -51,16 +51,30 @@ p,li{margin:0 0 12px;overflow-wrap:anywhere}
 ul{padding-left:22px;margin:0 0 12px}
 footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--muted);font:400 13px var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
 footer .wrap{display:flex;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+
+.snav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.snav::-webkit-scrollbar{display:none}
+.snav a{font:700 13px var(--f-display);font-stretch:112%;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:9px 12px;border-radius:999px;white-space:nowrap}
+.snav a:hover,.snav a[aria-current]{background:var(--surface)}
+.snav a.shop{background:var(--ink);color:var(--bg)}
+header .wrap{gap:10px}.logo{flex:none}
+@media (max-width:640px){.snav{gap:0}.snav a{padding:8px 4px;font-size:11px;letter-spacing:.02em;font-stretch:100%}.logo{font-size:16px}}
+
+.tag,.vid small,.bar span,.link span{font-family:var(--f-body);font-weight:600;letter-spacing:.06em}
+footer{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:14px}
+.card.c1,.card.c2,.collab.c1,.collab.c2{box-shadow:7px 7px 0 var(--pop)}
+.split img,.abphoto img{box-shadow:8px 8px 0 var(--pop)}
+.card .thumb,.collab img{height:auto}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="./">BB<span>JAKE</span></a><a class="back" href="./">Back to site</a></div></header>
+<header><div class="wrap"><a class="logo" href="/">BB<span>JAKE</span></a><nav class="snav" aria-label="Main"><a href="/about">About</a><a href="/media-kit">Media Kit</a><a href="/press">Press</a><a href="/community">Community</a><a class="shop" href="/#shop">Shop</a></nav></div></header>
 <main><div class="wrap">
 <h1>Terms of Use</h1>
 <p class="upd">Last updated October 29, 2026</p>
 <p>These terms cover your use of this website. By using the site you agree to them. If you do not agree, please do not use the site.</p>
 <h2>About this site</h2><p>This site is the official creator page for BBJake (Jacob Coburn), a live streamer, YouTuber and event host based in Visalia, California. It gathers Jake's videos, live stream, links, merchandise and business contact information in one place.</p><h2>Content and ownership</h2><p>The text, photos, graphics, logos, videos and other material on this site belong to BBJake or the people and brands featured, and are used with permission. Please do not copy, republish or sell any of it without written permission.</p><h2>Third-party services</h2><p>The site links to and embeds services that Jake does not run, including Twitch, YouTube, Instagram, TikTok and Discord. Those services have their own terms and privacy policies, and your use of them is up to you and them.</p><h2>Merchandise</h2><p>BeenBlessed Brand merchandise is sold through a separate online store at beenblessedbrand.com. Pricing, availability, shipping, returns and payment are handled by that store under its own policies. Many drops sell out, and items shown on this site may be unavailable.</p><h2>Business inquiries</h2><p>Partnership and sponsorship requests can be sent to info@bbjake.com. Sending a message does not create a contract or any obligation on either side until both parties agree to terms in writing.</p><h2>Community conduct</h2><p>If you join Jake's live chat or Discord, you agree to follow the rules of those platforms and to treat other people with respect. Harassment, hate and spam can lead to removal.</p><h2>No warranties</h2><p>The site is provided as is. We try to keep the information accurate, but follower counts, statistics, prices and availability change often and may be out of date. To the fullest extent the law allows, BBJake is not liable for losses that come from using the site or from the content of third-party sites it links to.</p><h2>Changes</h2><p>We may update these terms from time to time. The date at the top shows when they were last changed. Continuing to use the site after a change means you accept the new terms.</p><h2>Contact</h2><p>Questions about these terms: <a href="mailto:info@bbjake.com">info@bbjake.com</a>.</p>
 </div></main>
-<footer><div class="wrap"><span>&copy; 2026 BBJake</span><span><a href="/about">About</a> &middot; <a href="/media-kit">Media Kit</a> &middot; <a href="/press">Press</a> &middot; <a href="/community">Community</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/privacy.html">Privacy</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; 2026 BBJake</span><span><a href="/about">About</a> &middot; <a href="/media-kit">Media Kit</a> &middot; <a href="/press">Press</a> &middot; <a href="/community">Community</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/privacy">Privacy</a></span></div></footer>
 </body>
 </html>

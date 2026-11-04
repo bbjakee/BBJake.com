@@ -1,6 +1,7 @@
 # BBJake - https://www.bbjake.com
 User-agent: *
 Allow: /
+Disallow: /api/
 
 # AI and search crawlers are welcome
 User-agent: GPTBot

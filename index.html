@@ -478,7 +478,9 @@ footer a{text-decoration:none}
     {id:'1ImfJ1--exc',t:'I hosted a park boxing event (GONE WRONG)',d:'40:37',v:4100,vt:'4.1K views',ago:'1 year ago',o:6}
   ];
   function thumb(x){
-    return '<div class="thumb"><img alt="'+x.t.replace(/"/g,'&quot;')+'" loading="lazy" src="'+TH[x.o]+'"><span class="dur">'+x.d+'</span></div>';
+    var src=x.img||TH[x.o];
+    var fb=x.img?' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+x.id+'/mqdefault.jpg\'"':'';
+    return '<div class="thumb"><img alt="'+x.t.replace(/"/g,'&quot;')+'" loading="lazy" src="'+src+'"'+fb+'>'+(x.d?'<span class="dur">'+x.d+'</span>':'')+'</div>';
   }
   function vcard(x,feat){
     var url='https://www.youtube.com/watch?v='+x.id;
@@ -493,10 +495,13 @@ footer a{text-decoration:none}
     return '<a class="vid" href="'+url+'" target="_blank" rel="noopener">'+thumb(x)+'<h3>'+x.t+'</h3><small>'+x.vt+' &middot; '+x.ago+'</small></a>';
   }
   var vbox=document.getElementById('vids'), sortBtns=document.querySelectorAll('[data-sort]');
+  var vmode='latest';
   function renderVideos(mode){
+    vmode=mode;
     var list=videos.slice();
     if(mode==='popular'){list.sort(function(a,b){return b.v-a.v||a.o-b.o})}
     else{list.sort(function(a,b){return a.o-b.o})}
+    list=list.slice(0,7);
     sortBtns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.sort===mode)});
     var html='';
     list.forEach(function(x,i){html+=vcard(x,i===0)});
@@ -504,6 +509,30 @@ footer a{text-decoration:none}
   }
   sortBtns.forEach(function(b){b.onclick=function(){renderVideos(b.dataset.sort)}});
   renderVideos('latest');
+
+  /* ---------- Live YouTube feed (falls back to the list above if it fails) ---------- */
+  function fmtViews(n){
+    if(n>=1e6)return (n/1e6).toFixed(1).replace(/\.0$/,'')+'M views';
+    if(n>=1000)return (n/1000).toFixed(n>=10000?0:1).replace(/\.0$/,'')+'K views';
+    return n+' views';
+  }
+  function fmtAgo(iso){
+    var d=Math.floor((Date.now()-new Date(iso).getTime())/864e5);
+    if(isNaN(d))return '';
+    if(d<1)return 'today';
+    if(d===1)return '1 day ago';
+    if(d<14)return d+' days ago';
+    if(d<60)return Math.floor(d/7)+' weeks ago';
+    if(d<365)return Math.floor(d/30)+' months ago';
+    var y=Math.floor(d/365);return y+(y===1?' year ago':' years ago');
+  }
+  if(window.fetch){
+    fetch('/api/videos').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+      if(!j||!j.videos||!j.videos.length)return;
+      videos=j.videos.map(function(v,i){return {id:v.id,t:v.title,v:v.views,vt:fmtViews(v.views),ago:fmtAgo(v.published),o:i,img:'https://i.ytimg.com/vi/'+v.id+'/hq720.jpg'}});
+      renderVideos(vmode);
+    }).catch(function(){});
+  }
 
   /* ---------- Shop ---------- */
   var ink='#0C1830';

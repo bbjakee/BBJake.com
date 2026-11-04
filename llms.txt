@@ -5,6 +5,9 @@
 ## Pages
 - [Home](https://www.bbjake.com/): live stream, latest videos, merch, partnerships and links
 - [About BBJake](https://www.bbjake.com/about): who he is, events, collaborations, community work and how to partner
+- [Media Kit](https://www.bbjake.com/media-kit): audience numbers, past events, collaborations and ways to partner
+- [Press](https://www.bbjake.com/press): news coverage and media requests
+- [Community](https://www.bbjake.com/community): giveback events and the BeenBlessed nonprofit goal
 
 ## Channels
 - [Twitch](https://www.twitch.tv/bbjakee/)

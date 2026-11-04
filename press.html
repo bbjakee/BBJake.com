@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BBJake Press | News Coverage &amp; Media Requests</title>
-<meta name="description" content="BBJake in the news: Visalia Times-Delta, Yahoo, SportsCenter and more. Media requests: info@bbjake.com.">
+<meta name="description" content="BBJake in the news: Visalia Times-Delta, Yahoo and Medium. Media requests: info@bbjake.com.">
 <link rel="canonical" href="https://www.bbjake.com/press">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230C1830%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2714%27 text-anchor=%27middle%27 fill=%27%23FF3B7F%27%3EBB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,34 +90,50 @@ a.card:hover{transform:translateY(-3px)}
 .split{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
 .split img{display:block;width:100%;border:4px solid var(--ink);border-radius:8px;box-shadow:8px 8px 0 var(--sun);aspect-ratio:16/9;object-fit:cover}
 @media (max-width:900px){.collabs{grid-template-columns:repeat(3,1fr)}.merch{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.hero .grid2,.split{grid-template-columns:1fr}.hero img.portrait{max-width:220px;order:-1}.collabs{grid-template-columns:repeat(2,1fr)}}</style>
+@media (max-width:640px){.hero .grid2,.split{grid-template-columns:1fr}.hero img.portrait{max-width:220px;order:-1}.collabs{grid-template-columns:repeat(2,1fr)}}
+.card .thumb.top{object-position:50% 10%}
+.rows{display:flex;flex-direction:column;border-top:3px solid var(--ink)}
+.row{display:grid;grid-template-columns:150px 1fr auto;gap:20px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.row img{display:block;width:150px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;background:var(--line)}
+.row h3{margin:0 0 2px}.row p{margin:0;font-size:15px;color:var(--muted)}
+.row .big{font:900 26px/1 var(--f-display);font-stretch:115%;letter-spacing:-.02em;text-align:right;white-space:nowrap}
+.row .big small{display:block;font:500 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+a.row:hover h3{color:var(--pop)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;max-width:44em}
+.steps li{counter-increment:s;display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:500}
+.steps li:before{content:counter(s,decimal-leading-zero);font:500 13px var(--f-mono);color:var(--pop);padding-top:4px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:8px 0 0}
+.mini div{border-top:3px solid var(--ink);padding-top:12px}
+.mini b{display:block;font:900 26px/1 var(--f-display);font-stretch:115%;letter-spacing:-.02em;margin-bottom:6px}
+.mini span{font-size:15px;color:var(--muted)}
+@media (max-width:640px){.row{grid-template-columns:104px 1fr;gap:12px}.row img{width:104px}.row .big{grid-column:2;text-align:left;font-size:20px}.mini{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header><div class="wrap"><a class="logo" href="/">BB<span>JAKE</span></a><a class="back" href="/">Back To Site</a></div></header>
 <div class="hero"><div class="wrap"><div class="grid2"><div>
   <h1>BBJake <em>In The News</em></h1>
-  <p class="lead">Visalia's #1 content creator, covered by local news, SportsCenter and more.</p>
+  <p class="lead">Visalia's #1 content creator, in the news.</p>
   <div class="btns"><a class="btn pri" href="mailto:info@bbjake.com?subject=BBJake%20Press%20Inquiry">Media Requests</a><a class="btn" href="/media-kit">Media Kit</a></div>
-</div><img class="portrait" src="https://www.bbjake.com/img/og-bbjake.jpg" alt="BBJake" width="600" height="600"></div>
+</div><img class="portrait" src="https://www.bbjake.com/img/bbjake-portrait.jpg" alt="BBJake smiling and throwing up peace signs" width="600" height="600"></div>
 </div></div>
 
 <main class="wrap">
 <section>
   <h2>Coverage</h2>
   <div class="cards">
-    <a class="card c0" href="https://www.visaliatimesdelta.com/story/news/2025/12/20/adin-ross-will-host-event-at-visalia-convention-center-on-sunday/87862906007/" target="_blank" rel="noopener"><img class="thumb" src="https://www.bbjake.com/img/collab-adin-ross.jpg" alt="Adin Ross" loading="lazy"><div class="info"><span class="tag">Visalia Times-Delta · Dec 2025</span><h3>Adin Ross Comes Home To Visalia</h3><p>Named BBJake as a main reason Adin Ross came back for his Visalia giveback.</p><span class="go">Read Article →</span></div></a>
+    <a class="card c0" href="https://www.visaliatimesdelta.com/story/news/2025/12/20/adin-ross-will-host-event-at-visalia-convention-center-on-sunday/87862906007/" target="_blank" rel="noopener"><img class="thumb top" src="https://www.bbjake.com/img/collab-adin-ross.jpg" alt="Adin Ross" loading="lazy"><div class="info"><span class="tag">Visalia Times-Delta · Dec 2025</span><h3>Adin Ross Comes Home To Visalia</h3><p>Named BBJake as a main reason Adin Ross came back for his Visalia giveback.</p><span class="go">Read Article →</span></div></a>
     <a class="card c1" href="https://www.yahoo.com/entertainment/celebrity/articles/youtuber-woodlake-native-adin-ross-000022916.html" target="_blank" rel="noopener"><img class="thumb" src="https://www.bbjake.com/img/bbjake-twitch-stream.jpg" alt="BBJake live on Twitch" loading="lazy"><div class="info"><span class="tag">Yahoo · Dec 2025</span><h3>Adin Ross Returns To Tulare County</h3><p>The same story, picked up by Yahoo.</p><span class="go">Read Article →</span></div></a>
-    <a class="card c2" href="/#collabs"><img class="thumb" src="https://www.bbjake.com/img/collab-sportscenter.jpg" alt="SportsCenter" loading="lazy"><div class="info"><span class="tag">SportsCenter · Instagram</span><h3>Featured On SportsCenter</h3><p>BBJake was featured on SportsCenter's Instagram.</p><span class="go">See Collabs →</span></div></a>
-    <a class="card c0" href="https://medium.com/@bbjake/visalia-streamer-bbjake-takes-homeless-man-on-48-hour-la-trip-187c4cdf5e2d" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/u4C0PN0wJUk/hqdefault.jpg" alt="BBJake and Popeye in LA" loading="lazy"><div class="info"><span class="tag">Medium · Oct 2026</span><h3>48 Hours In LA With Popeye</h3><p>Jake takes a homeless man on the trip of a lifetime.</p><span class="go">Read Story →</span></div></a>
+    <a class="card c0" href="https://medium.com/@bbjake/visalia-streamer-bbjake-takes-homeless-man-on-48-hour-la-trip-187c4cdf5e2d" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/u4C0PN0wJUk/hq720.jpg" alt="BBJake and Popeye in LA" onerror="this.onerror=null;this.src=this.src.replace('hq720','mqdefault')" loading="lazy"><div class="info"><span class="tag">Medium · Oct 2026</span><h3>48 Hours In LA With Popeye</h3><p>Jake takes a homeless man on the trip of a lifetime.</p><span class="go">Read Story →</span></div></a>
   </div>
 </section>
 
 <section>
   <h2>Stories Worth Covering</h2>
   <div class="cards">
-<a class="card c0" href="https://www.youtube.com/watch?v=u4C0PN0wJUk" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/u4C0PN0wJUk/hqdefault.jpg" alt="Popeye&#x27;s Trip To LA" loading="lazy"><div class="info"><span class="tag">48 Hours</span><h3>Popeye&#x27;s Trip To LA</h3><p>A homeless man&#x27;s best 48 hours, from new clothes to Beverly Hills.</p><span class="go">Watch Video →</span></div></a>
-<a class="card c1" href="https://www.youtube.com/watch?v=K4HtFJRjcdI" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/K4HtFJRjcdI/hqdefault.jpg" alt="Biggest Water Balloon Fight In The 559" loading="lazy"><div class="info"><span class="tag">Community</span><h3>Biggest Water Balloon Fight In The 559</h3><p>10,000+ water balloons at Mill Creek Park.</p><span class="go">Watch Video →</span></div></a>
-<a class="card c2" href="https://www.tiktok.com/@bbjakelive/video/7701560978554506509" target="_blank" rel="noopener"><img class="thumb" src="https://www.bbjake.com/img/bbjake-confetti-hero.png" alt="Halloween Open Invite" loading="lazy"><div class="info"><span class="tag">Holidays</span><h3>Halloween Open Invite</h3><p>Trick-or-treating with anyone in the 559 who didn&#x27;t want to go alone.</p><span class="go">Watch On TikTok →</span></div></a>
+<a class="card c0" href="https://www.youtube.com/watch?v=u4C0PN0wJUk" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/u4C0PN0wJUk/hq720.jpg" alt="Popeye&#x27;s Trip To LA" onerror="this.onerror=null;this.src=this.src.replace('hq720','mqdefault')" loading="lazy"><div class="info"><span class="tag">48 Hours</span><h3>Popeye&#x27;s Trip To LA</h3><p>A homeless man&#x27;s best 48 hours, from new clothes to Beverly Hills.</p><span class="go">Watch Video →</span></div></a>
+<a class="card c1" href="https://www.youtube.com/watch?v=K4HtFJRjcdI" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/K4HtFJRjcdI/hq720.jpg" alt="Biggest Water Balloon Fight In The 559" onerror="this.onerror=null;this.src=this.src.replace('hq720','mqdefault')" loading="lazy"><div class="info"><span class="tag">Community</span><h3>Biggest Water Balloon Fight In The 559</h3><p>10,000+ water balloons at Mill Creek Park.</p><span class="go">Watch Video →</span></div></a>
+<a class="card c2" href="https://www.youtube.com/watch?v=gitM-V4RN-Q" target="_blank" rel="noopener"><img class="thumb" src="https://i.ytimg.com/vi/gitM-V4RN-Q/hq720.jpg" alt="BBJake dressed as MrBeast on Halloween" onerror="this.onerror=null;this.src=this.src.replace('hq720','mqdefault')" loading="lazy"><div class="info"><span class="tag">Holidays</span><h3>Halloween As MrBeast</h3><p>Jake took over Halloween as MrBeast and blessed the kids.</p><span class="go">Watch Video →</span></div></a>
 </div>
 </section>
 

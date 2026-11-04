@@ -387,6 +387,7 @@ footer a{text-decoration:none}
           <a class="btn" href="mailto:info@bbjake.com">Send Email</a>
         </div>
       </div>
+      <div class="btns" style="margin-top:16px"><a class="btn pri" href="/media-kit">View The Media Kit</a></div>
 
       <div class="collabwrap" id="collabs">
           <div class="sec-head">
@@ -428,7 +429,7 @@ footer a{text-decoration:none}
     <div class="fine">
       <span>&copy; 2026 BBJake</span>
       <span><a href="#partner">Work With Jake</a> &middot; info@bbjake.com</span>
-      <span><a href="/about">About</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a></span>
+      <span><a href="/about">About</a> &middot; <a href="/media-kit">Media Kit</a> &middot; <a href="/press">Press</a> &middot; <a href="/community">Community</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/privacy.html">Privacy</a></span>
     </div>
     <div class="soc" aria-label="Jake on social media">
       <a href="https://www.instagram.com/bbjake" target="_blank" rel="noopener">Instagram</a> &middot;
@@ -469,14 +470,15 @@ footer a{text-decoration:none}
 
   /* ---------- Videos ---------- */
   var videos=[
-    {id:'u4C0PN0wJUk',t:'I took a random homeless man on the trip of a LIFETIME!',d:'1:01:11',v:1000,vt:'1K views',ago:'13 days ago',o:0},
-    {id:'K4HtFJRjcdI',t:'i tried throwing the biggest water balloon war of all time...',d:'24:04',v:1900,vt:'1.9K views',ago:'2 months ago',o:1},
-    {id:'mSGemKdYN8U',t:'BBJAKE - TROPHY OF THE V (Official Music Video)',d:'2:21',v:4100,vt:'4.1K views',ago:'5 months ago',o:2},
-    {id:'WvlrrlFDEjI',t:'we threw a $$$$ 1v1 tourney....',d:'31:36',v:731,vt:'731 views',ago:'7 months ago',o:3},
-    {id:'mGifG8s_cZ4',t:'I almost got arrested this time...',d:'24:52',v:1900,vt:'1.9K views',ago:'10 months ago',o:4},
-    {id:'EntAaBTKMp8',t:'WE BROUGHT THE CITY TOGETHER!',d:'21:11',v:955,vt:'955 views',ago:'11 months ago',o:5},
-    {id:'1ImfJ1--exc',t:'I hosted a park boxing event (GONE WRONG)',d:'40:37',v:4100,vt:'4.1K views',ago:'1 year ago',o:6}
+    {id:'u4C0PN0wJUk',t:'I took a random homeless man on the trip of a LIFETIME!',d:'1:01:11',v:1000,vt:'1K views',pub:'2026-10-14T00:00:00Z',o:0},
+    {id:'K4HtFJRjcdI',t:'i tried throwing the biggest water balloon war of all time...',d:'24:04',v:1900,vt:'1.9K views',pub:'2026-08-20T00:00:00Z',o:1},
+    {id:'mSGemKdYN8U',t:'BBJAKE - TROPHY OF THE V (Official Music Video)',d:'2:21',v:4100,vt:'4.1K views',pub:'2026-05-28T00:00:00Z',o:2},
+    {id:'WvlrrlFDEjI',t:'we threw a $$$$ 1v1 tourney....',d:'31:36',v:731,vt:'731 views',pub:'2026-03-28T00:00:00Z',o:3},
+    {id:'mGifG8s_cZ4',t:'I almost got arrested this time...',d:'24:52',v:1900,vt:'1.9K views',pub:'2025-12-28T00:00:00Z',o:4},
+    {id:'EntAaBTKMp8',t:'WE BROUGHT THE CITY TOGETHER!',d:'21:11',v:955,vt:'955 views',pub:'2025-11-28T00:00:00Z',o:5},
+    {id:'1ImfJ1--exc',t:'I hosted a park boxing event (GONE WRONG)',d:'40:37',v:4100,vt:'4.1K views',pub:'2025-10-28T00:00:00Z',o:6}
   ];
+  videos.forEach(function(v){v.ago=fmtAgo(v.pub)});
   function thumb(x){
     var src=x.img||TH[x.o];
     var fb=x.img?' onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/'+x.id+'/mqdefault.jpg\'"':'';
@@ -529,7 +531,10 @@ footer a{text-decoration:none}
   if(window.fetch){
     fetch('/api/videos').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
       if(!j||!j.videos||!j.videos.length)return;
-      videos=j.videos.map(function(v,i){return {id:v.id,t:v.title,v:v.views,vt:fmtViews(v.views),ago:fmtAgo(v.published),o:i,img:'https://i.ytimg.com/vi/'+v.id+'/hq720.jpg'}});
+      var live=j.videos.map(function(v){return {id:v.id,t:v.title,v:v.views,vt:fmtViews(v.views),ago:fmtAgo(v.published),img:'https://i.ytimg.com/vi/'+v.id+'/hq720.jpg'}});
+      var seen={};live.forEach(function(v){seen[v.id]=1});
+      var rest=videos.filter(function(v){return !seen[v.id]});
+      videos=live.concat(rest).map(function(v,i){v.o=i;return v});
       renderVideos(vmode);
     }).catch(function(){});
   }
